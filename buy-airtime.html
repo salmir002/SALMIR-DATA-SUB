@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buy Airtime | SALMIR DATA SUB</title>  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #f1f5fb;
+      padding: 20px;
+    }
+
+    .container {
+      background: white;
+      max-width: 450px;
+      margin: 30px auto;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px #00000012;
+    }
+
+    h1 {
+      color: #102b55;
+      text-align: center;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #68758a;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin: 16px 0 7px;
+      font-weight: bold;
+      color: #26364d;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #d5dce7;
+      border-radius: 7px;
+      font-size: 15px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 23px;
+      border: none;
+      border-radius: 7px;
+      background: #102b55;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .price {
+      background: #f1f5fb;
+      padding: 15px;
+      border-radius: 7px;
+      margin-top: 18px;
+      color: #102b55;
+      font-weight: bold;
+    }
+
+    .back {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #1769aa;
+      text-decoration: none;
+    }
+  </style></head><body><div class="container">  <h1>SALMIR DATA SUB</h1>  <p class="subtitle">Buy Airtime Instantly</p>  <form id="airtimeForm"><label for="network">Select Network</label>
+<select id="network" required>
+  <option value="">Choose Network</option>
+  <option>MTN</option>
+  <option>Airtel</option>
+  <option>Glo</option>
+  <option>9mobile</option>
+</select>
+
+<label for="phone">Phone Number</label>
+<input
+  type="tel"
+  id="phone"
+  placeholder="Enter phone number"
+  maxlength="11"
+  pattern="[0-9]{11}"
+  required
+>
+
+<label for="amount">Enter Amount (₦)</label>
+<input
+  type="number"
+  id="amount"
+  placeholder="Enter amount"
+  min="50"
+  required
+>
+
+<div class="price">
+  Total Amount: <span id="price">₦0</span>
+</div>
+
+<button type="submit">Continue</button>
+
+  </form>  <a href="dashboard.html" class="back">
+    ← Back to Dashboard
+  </a></div><script>
+
+  const amount = document.getElementById("amount");
+  const price = document.getElementById("price");
+
+  amount.addEventListener("input", function() {
+    const value = Number(this.value);
+
+    price.textContent = "₦" +
+      value.toLocaleString("en-NG");
+  });
+
+  document.getElementById("airtimeForm")
+    .addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      alert("Airtime purchase system is not connected yet.");
+
+    });
+
+</script></body>
+</html>
