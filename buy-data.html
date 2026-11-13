@@ -1,0 +1,136 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buy Data | SALMIR DATA SUB</title>  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #f1f5fb;
+      padding: 20px;
+    }
+
+    .container {
+      background: white;
+      max-width: 450px;
+      margin: 30px auto;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px #00000012;
+    }
+
+    h1 {
+      color: #102b55;
+      text-align: center;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #68758a;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin: 16px 0 7px;
+      font-weight: bold;
+      color: #26364d;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #d5dce7;
+      border-radius: 7px;
+      background: white;
+      font-size: 15px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 23px;
+      border: none;
+      border-radius: 7px;
+      background: #102b55;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .price {
+      background: #f1f5fb;
+      padding: 15px;
+      border-radius: 7px;
+      margin-top: 18px;
+      color: #102b55;
+      font-weight: bold;
+    }
+
+    .back {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #1769aa;
+      text-decoration: none;
+    }
+  </style></head><body><div class="container">  <h1>SALMIR DATA SUB</h1>  <p class="subtitle">Buy Affordable Data</p>  <form id="dataForm"><label for="network">Select Network</label>
+<select id="network" required>
+  <option value="">Choose Network</option>
+  <option value="MTN">MTN</option>
+  <option value="Airtel">Airtel</option>
+  <option value="Glo">Glo</option>
+  <option value="9mobile">9mobile</option>
+</select>
+
+<label for="phone">Phone Number</label>
+<input
+  type="tel"
+  id="phone"
+  placeholder="Enter phone number"
+  pattern="[0-9]{11}"
+  maxlength="11"
+  required
+>
+
+<label for="plan">Select Data Plan</label>
+<select id="plan" required>
+  <option value="">Choose Data Plan</option>
+  <option value="500">500MB - ₦500</option>
+  <option value="1000">1GB - ₦1,000</option>
+  <option value="2000">2GB - ₦2,000</option>
+  <option value="3000">3GB - ₦3,000</option>
+  <option value="5000">5GB - ₦5,000</option>
+</select>
+
+<div class="price">
+  Total Price: <span id="price">₦0</span>
+</div>
+
+<button type="submit">Continue</button>
+
+  </form><a href="dashboard.html" class="back">← Back to Dashboard</a>
+
+</div><script>
+
+  const plan = document.getElementById("plan");
+  const price = document.getElementById("price");
+
+  plan.addEventListener("change", function() {
+    const amount = Number(this.value);
+    price.textContent = "₦" + amount.toLocaleString("en-NG");
+  });
+
+  document.getElementById("dataForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    alert("Data purchase system is not connected yet. Please try again later.");
+  });
+
+</script></body>
+</html>
