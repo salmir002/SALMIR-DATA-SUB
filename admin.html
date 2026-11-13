@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel | SALMIR DATA SUB</title>  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #f1f5fb;
+      color: #26364d;
+    }
+
+    header {
+      background: #102b55;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .welcome {
+      margin-bottom: 25px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .card {
+      background: white;
+      padding: 22px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px #0000000d;
+    }
+
+    .card h3 {
+      color: #102b55;
+    }
+
+    .card p {
+      color: #68758a;
+    }
+
+    .card h2 {
+      color: #1769aa;
+    }
+
+    button {
+      background: #102b55;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 7px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .links {
+      background: white;
+      padding: 20px;
+      margin-top: 25px;
+      border-radius: 12px;
+    }
+
+    .links a {
+      display: block;
+      padding: 12px;
+      color: #1769aa;
+      text-decoration: none;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logout {
+      background: #e74c3c;
+    }
+
+    @media(max-width: 500px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style></head><body><header>
+  <h2>SALMIR DATA SUB</h2>
+  <p>Administrator Dashboard</p>
+</header><div class="container">  <div class="welcome">
+    <h2>Welcome, Administrator!</h2>
+    <p>Manage your SALMIR DATA SUB platform.</p>
+  </div>  <div class="grid"><div class="card">
+  <h3>👥 Customers</h3>
+  <h2>0</h2>
+  <p>Registered customers</p>
+</div>
+
+<div class="card">
+  <h3>💰 Transactions</h3>
+  <h2>₦0</h2>
+  <p>Total transaction value</p>
+</div>
+
+<div class="card">
+  <h3>📶 Data Orders</h3>
+  <h2>0</h2>
+  <p>Total data orders</p>
+</div>
+
+<div class="card">
+  <h3>📱 Airtime Orders</h3>
+  <h2>0</h2>
+  <p>Total airtime orders</p>
+</div>
+
+  </div>  <div class="links"><h3>Admin Management</h3>
+
+<a href="dashboard.html">Customer Dashboard</a>
+
+<a href="buy-data.html">Data Services</a>
+
+<a href="buy-airtime.html">Airtime Services</a>
+
+<a href="wallet.html">Wallet Management</a>
+
+<a href="profile.html">Customer Profiles</a>
+
+<button class="logout" onclick="logout()">
+  Logout
+</button>
+
+  </div></div><script>
+  function logout() {
+    window.location.href = "Login.html";
+  }
+</script></body>
+  </html>
